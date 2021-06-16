@@ -25,6 +25,7 @@ public class main {
 
         } else
             newbalance=balance+replenishment; // подсчет нового баланса без учета бонуса
-        System.out.println(newbalance/100);
+        System.out.println("Ваш баланс " + newbalance/100 + " рублей.");
+        System.out.println("Ваш бонус составляет " + bonus + " баллов.");
     }
 }
