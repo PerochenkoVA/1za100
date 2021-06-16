@@ -12,20 +12,21 @@
 // значения переменных хранящих начальную сумму счёта и сумму пополнения чтобы итоговый счёт и бонусные рубли были расчитаны верно.
 //Пример схемы кода вашего приложения:
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
-        int balance = 100_00; //начальынй баланс
-        int replenishment = 1100_00; //сумма пополнения
-        int bonus = replenishment/100; //расчет бонуса
-        int newbalance;
+        int balance = 500_00; //начальынй баланс
+        int replenishment = 2000_00; //сумма пополнения
+        int bonus = replenishment / 100; //расчет бонуса
+        int imbalance;
 
-        if(replenishment > 1000_00) {
-            newbalance=balance+replenishment+bonus; // подсчет нового баланса с учетом бонуса
+        if (replenishment > 1000_00) {
+            imbalance = balance + replenishment + bonus; // подсчет нового баланса с учетом бонуса
 
-        } else
-            newbalance=balance+replenishment; // подсчет нового баланса без учета бонуса
-        System.out.println("Ваш баланс " + newbalance/100 + " рублей.");
-        System.out.println("Ваш бонус составляет " + bonus + " баллов.");
+        } else {
+            imbalance = balance + replenishment; // подсчет нового баланса без учета бонуса
+        }
+        System.out.println("Ваш баланс " + imbalance / 100 + " рублей.");
+        System.out.println("Ваш бонус составляет " + bonus/100 + " баллов.");
     }
 }
